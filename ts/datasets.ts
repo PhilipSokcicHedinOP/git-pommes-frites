@@ -4,6 +4,10 @@ export const getEvenNumbers = () => getDataset().filter(isEven);
 
 export const getOddNumbers = () => getDataset().filter(isOdd);
 
+export const getBigNumbers = () => getDataset().filter(isBigNumber);
+
 const isEven = (num: number) => num % 2 == 0;
 
 const isOdd = (num: number) => !isEven(num);
+
+const isBigNumber = (num: number) => num >= 5;
