@@ -8,8 +8,12 @@ export const getOddNumbers = () => getDataset().filter(isOdd);
 
 export const getBigNumbers = () => getDataset().filter(isBigNumber);
 
+export const getSmallNumbers = () => getDataset().filter(isSmallNumber);
+
 const isEven = (num: number) => num % 2 == 0;
 
 const isOdd = (num: number) => !isEven(num);
 
 const isBigNumber = (num: number) => num >= 5;
+
+const isSmallNumber = (num: number) => !isBigNumber(num);
